@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.69cb48ee.css",
+    "main.js": "/static/js/main.be0483ff.js",
+    "static/js/453.6fc489d3.chunk.js": "/static/js/453.6fc489d3.chunk.js",
+    "static/media/NotoKufiArabic-Light.ttf": "/static/media/NotoKufiArabic-Light.04c16736863ce8e742c4.ttf",
+    "static/media/NotoKufiArabic-Bold.ttf": "/static/media/NotoKufiArabic-Bold.3427384fc98b9e8a9ce5.ttf",
+    "static/media/NotoKufiArabic-Regular.ttf": "/static/media/NotoKufiArabic-Regular.942c3c833952459a44a4.ttf",
+    "static/media/Jost-Light.ttf": "/static/media/Jost-Light.716ee74019eb47be60d8.ttf",
+    "static/media/Jost-Bold.ttf": "/static/media/Jost-Bold.31ea9eccd9c8723bd3e8.ttf",
+    "static/media/Jost-Regular.ttf": "/static/media/Jost-Regular.59de2b38b1b77348c048.ttf",
+    "static/media/usa.png": "/static/media/usa.0237dbdc9b79a7b79299.png",
+    "index.html": "/index.html",
+    "static/media/getFetch.cjs": "/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
+    "main.69cb48ee.css.map": "/static/css/main.69cb48ee.css.map",
+    "main.be0483ff.js.map": "/static/js/main.be0483ff.js.map",
+    "453.6fc489d3.chunk.js.map": "/static/js/453.6fc489d3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69cb48ee.css",
+    "static/js/main.be0483ff.js"
+  ]
+}
