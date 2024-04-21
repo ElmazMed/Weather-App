@@ -3,18 +3,24 @@ import Grid from "@mui/material/Unstable_Grid2";
 
 import { useDispatch, useSelector } from "react-redux";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+
 import { fetchWeatherApi } from "../WeatherSlice";
+
+import { Translation } from "../TranslitionContext";
 
 export default function WeatherInfo() {
   const result = useSelector((state) => {
     return state.weather.weather;
   });
+
   const dispatch = useDispatch();
-  console.log(result);
   useEffect(() => {
     dispatch(fetchWeatherApi());
   }, []);
+
+  const { t } = useContext(Translation);
+
   return (
     <Grid container justifyContent={"center"} spacing={4}>
       <Grid xs={5} sm={4}>
@@ -23,7 +29,7 @@ export default function WeatherInfo() {
             {result.high}°
           </Typography>
           <Typography variant="h4" color={"#ffff"}>
-            High
+            {t("High")}
           </Typography>
         </Stack>
       </Grid>
@@ -33,7 +39,7 @@ export default function WeatherInfo() {
             {result.wind}km/h
           </Typography>
           <Typography variant="h4" color={"#ffff"}>
-            Wind
+            {t("Wind")}
           </Typography>
         </Stack>
       </Grid>
@@ -43,7 +49,7 @@ export default function WeatherInfo() {
             {result.sunrise}
           </Typography>
           <Typography variant="h4" color={"#ffff"}>
-            Sunrise
+            {t("Sunrise")}
           </Typography>
         </Stack>
       </Grid>
@@ -54,7 +60,7 @@ export default function WeatherInfo() {
             {result.low}°
           </Typography>
           <Typography variant="h4" color={"#ffff"}>
-            Low
+            {t("Low")}
           </Typography>
         </Stack>
       </Grid>
@@ -64,7 +70,7 @@ export default function WeatherInfo() {
             {result.humidity}%
           </Typography>
           <Typography variant="h4" color={"#ffff"}>
-            Humidity
+            {t("Humidity")}
           </Typography>
         </Stack>
       </Grid>
@@ -74,7 +80,7 @@ export default function WeatherInfo() {
             {result.sunset}
           </Typography>
           <Typography variant="h4" color={"#ffff"}>
-            Sunset
+            {t("Sunset")}
           </Typography>
         </Stack>
       </Grid>

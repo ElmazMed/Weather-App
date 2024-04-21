@@ -1,0 +1,21 @@
+{
+    "Morocco": "المغرب",
+    "High": "الكبرى",
+    "Low": "الصغرى",
+    "Wind": "الرياح",
+    "Humidity": "الرطوبة",
+    "Sunrise": "الشروق",
+    "Sunset": "الغروب",
+    "Tomorrow's Weather": "الطقس غدا",
+    "overcast clouds": "غيوم",
+    "clear sky": "سماء صافية",
+    "few clouds": "قليل الغيوم",
+     "scattered clouds": "غيوم متفرقة",
+     "broken clouds":"غيوم متقطعة",
+     "rain":"مطر",
+     "thunderstorm":"عاصفة رعدية",
+     "snow":"تساقط الثلج",
+     "mist":"ضباب",
+     "shower rain":"زخات مطرية",
+     "Dar Bouazza":"دار بوعزة"
+}

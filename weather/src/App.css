@@ -13,3 +13,19 @@
   src: url("../src/Fonts/Jost-Light.ttf");
   font-weight: 300;
 }
+
+@font-face {
+  font-family: "Arabic";
+  src: url("../src/Fonts/Ar/NotoKufiArabic-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Arabic";
+  src: url("../src/Fonts/Ar/NotoKufiArabic-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Arabic";
+  src: url("../src/Fonts/Ar/NotoKufiArabic-Regular.ttf");
+  font-weight: 500;
+}

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 
 import { Box, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
@@ -6,7 +6,8 @@ import Grid from "@mui/material/Unstable_Grid2";
 import WeatherInfo from "./WeatherInfo";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchWeatherApi } from "../WeatherSlice";
-import { changeResult } from "../WeatherSlice";
+
+import { Translation } from "../TranslitionContext";
 
 export default function WeatherNow() {
   const dispatch = useDispatch();
@@ -17,6 +18,8 @@ export default function WeatherNow() {
   useEffect(() => {
     dispatch(fetchWeatherApi());
   }, []);
+
+  const { t } = useContext(Translation);
 
   return (
     <Box sx={{ flexGrow: 1 }} my={10} alignItems={"center"}>
@@ -36,7 +39,7 @@ export default function WeatherNow() {
                   {result.temp}°
                 </Typography>
                 <Typography variant="h5" fontWeight={300} color={"#ffff"}>
-                  {result.description}
+                  {t(result.description)}
                 </Typography>
               </Stack>
             </Grid>

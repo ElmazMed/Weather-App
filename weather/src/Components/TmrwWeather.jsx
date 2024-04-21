@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 
 import { Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 
 import { useDispatch, useSelector } from "react-redux";
 import { fetchWeatherApi } from "../WeatherSlice";
+
+import { Translation } from "../TranslitionContext";
 
 export default function TmrwWeather() {
   const cardShape = {
@@ -15,7 +17,6 @@ export default function TmrwWeather() {
   };
 
   const result = useSelector((state) => {
-    console.log(state);
     return state.weather.weather;
   });
 
@@ -25,10 +26,12 @@ export default function TmrwWeather() {
     dispatch(fetchWeatherApi());
   }, []);
 
+  const { t } = useContext(Translation);
+
   return (
     <>
       <Typography fontSize={"2rem"} color={"#ffff"} mb={2}>
-        Tomorrow's Weather
+        {t("Tomorrow's Weather")}
       </Typography>
       <Grid container spacing={2}>
         <Grid xs={6} sm={4} md={2}>
@@ -42,7 +45,7 @@ export default function TmrwWeather() {
             gap={cardShape.gap}
           >
             <Typography variant="h4" fontWeight={300} color={"#ffff"}>
-              3am
+              3:00
             </Typography>
 
             <img
@@ -67,7 +70,7 @@ export default function TmrwWeather() {
             gap={cardShape.gap}
           >
             <Typography variant="h4" fontWeight={300} color={"#ffff"}>
-              6am
+              6:00
             </Typography>
 
             <img
@@ -92,7 +95,7 @@ export default function TmrwWeather() {
             gap={cardShape.gap}
           >
             <Typography variant="h4" fontWeight={300} color={"#ffff"}>
-              9am
+              9:00
             </Typography>
 
             <img
@@ -117,7 +120,7 @@ export default function TmrwWeather() {
             gap={cardShape.gap}
           >
             <Typography variant="h4" fontWeight={300} color={"#ffff"}>
-              12pm
+              12:00
             </Typography>
 
             <img
@@ -142,7 +145,7 @@ export default function TmrwWeather() {
             gap={cardShape.gap}
           >
             <Typography variant="h4" fontWeight={300} color={"#ffff"}>
-              3pm
+              15:00
             </Typography>
 
             <img
@@ -167,7 +170,7 @@ export default function TmrwWeather() {
             gap={cardShape.gap}
           >
             <Typography variant="h4" fontWeight={300} color={"#ffff"}>
-              6pm
+              18:00
             </Typography>
 
             <img
